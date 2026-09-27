@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth_app?createDatabaseIfNotExist=true
+    username: root
+    password: root123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update          # auto-creates/updates tables from entities
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: true
+
+  devtools:
+    restart:
+      enabled: true
+
+# ===================== JWT CONFIG =====================
+security:
+  jwt:
+    # In production, move this to an environment variable. Must be >= 32 characters for HS256.
+    secret: mySuperSecretKeyThatIsAtLeast32CharactersLong12345
+    expiration-ms: 3600000       # 1 hour access token validity
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+
+logging:
+  level:
+    org.springframework.security: INFO
