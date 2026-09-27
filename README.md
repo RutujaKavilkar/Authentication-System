@@ -1,8 +1,8 @@
 # 🚀 Authentication System (Spring Boot + JWT + RBAC)
 
-A production-ready backend authentication system built using **Spring Boot**, implementing **JWT-based authentication** and **Role-Based Access Control (RBAC)**.
+Introducing a secure backend authentication system built using **Spring Boot**, implementing **JWT-based authentication** and **Role-Based Access Control (RBAC)**.
 
-Designed with clean architecture, secure practices, and real-world API workflows — aligned with **product-based company standards**.
+The system is designed with a clean layered architecture and demonstrates real-world backend workflows including user registration, authentication, token-based authorization, and role-based access management using Spring Security.
 
 ---
 ## 🏗️ System Architecture
